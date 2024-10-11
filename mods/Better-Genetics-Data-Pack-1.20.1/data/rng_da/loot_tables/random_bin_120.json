@@ -1,0 +1,31 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "minecraft:structure_void",
+					"functions": [
+						{
+							"function": "set_attributes",
+							"modifiers": [
+								{
+									"name": "random",
+									"attribute": "minecraft:generic.armor",
+									"operation": "addition",
+									"slot": "feet",
+									"amount": {
+										"p": 0.5,
+										"n": 120,
+										"type": "minecraft:binomial"
+									}
+								}
+							]
+						}
+					]
+                }
+            ]
+        }
+    ]
+}

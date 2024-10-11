@@ -1,0 +1,4 @@
+tellraw @p[tag=genetics.caster] {"text":"Mutation Catalysts do not work on bees.","color":"red"}
+#execute if entity @s[nbt={Attributes:[{"Name":"minecraft:generic.follow_range",Modifiers:[{Name:"Aging",Amount:5d},{Name:"Fertility",Amount:4d},{Name:"Honey",Amount:5d}]}]}] run tellraw @p[tag=genetics.caster] {"text":"No stats increased - this animal already has all max values!","color":"red"}
+#execute unless entity @s[nbt={Attributes:[{"Name":"minecraft:generic.follow_range",Modifiers:[{Name:"Aging",Amount:5d},{Name:"Fertility",Amount:4d},{Name:"Honey",Amount:5d}]}]}] run clear @p[tag=genetics.caster,gamemode=!creative] minecraft:firework_star{display:{Name:'{"text":"Weak Mutation Catalyst","color":"aqua","italic":false}'}} 1
+#execute unless entity @s[nbt={Attributes:[{"Name":"minecraft:generic.follow_range",Modifiers:[{Name:"Aging",Amount:5d},{Name:"Fertility",Amount:4d},{Name:"Honey",Amount:5d}]}]}] run function genetics:weak/bee/random

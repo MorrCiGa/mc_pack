@@ -1,0 +1,3 @@
+execute if score friendly genetics.set matches 2 run tellraw @s [{"text":"Easy Breeding is already turned ","color":"yellow"},{"text":"Off","color":"dark_red"},{"text":".","color":"yellow"}]
+execute if score friendly genetics.set matches 1 run tellraw @s [{"text":"Easy Breeding has been turned ","color":"yellow"},{"text":"Off","color":"dark_red"},{"text":".","color":"yellow"}]
+execute if score friendly genetics.set matches 1 run scoreboard players set friendly genetics.set 2

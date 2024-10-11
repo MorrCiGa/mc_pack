@@ -1,0 +1,21 @@
+{
+    "criteria": {
+        "breed": {
+            "trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+			    "damage": {
+				    "source_entity": {
+					    "nbt": "{SelectedItem:{tag:{display:{Name:'{\"text\":\"Weak Mutation Catalyst\",\"color\":\"aqua\",\"italic\":false}'}}}}"
+					}
+				},
+				"entity": {
+				    "type": "#genetics:gen",
+					"nbt": "{Tags:[\"genetics.scanned\"]}"
+				}
+			}
+        }
+    },
+    "rewards": {
+        "function": "genetics:weak"
+    }
+}

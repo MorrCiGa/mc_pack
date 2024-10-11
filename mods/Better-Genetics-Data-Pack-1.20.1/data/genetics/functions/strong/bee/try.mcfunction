@@ -1,0 +1,4 @@
+tellraw @p[tag=genetics.caster] {"text":"Mutation Catalysts do not work on bees.","color":"red"}
+#execute if entity @s[nbt={HandItems:[{},{tag:{Aging:5,Fertility:4,Honey:5}}]}] run tellraw @p[tag=genetics.caster] {"text":"No stats increased - this animal already has all max values!","color":"red"}
+#execute unless entity @s[nbt={HandItems:[{},{tag:{Aging:5,Fertility:4,Honey:5}}]}] run clear @p[tag=genetics.caster,gamemode=!creative] minecraft:firework_star{display:{Name:'{"text":"Potent Mutation Catalyst","color":"light_purple","italic":false}'}} 1
+#execute unless entity @s[nbt={HandItems:[{},{tag:{Aging:5,Fertility:4,Honey:5}}]}] run function genetics:strong/bee/branch

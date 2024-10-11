@@ -1,0 +1,92 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              },
+    		  "conditions": [
+	    	    {
+		    	  "condition": "minecraft:entity_properties",
+			      "predicate": {
+    			    "nbt": "{HandItems:[{},{tag:{String:1}}]}"
+			      },
+				  "entity": "this"
+    			}
+	    	  ]
+			},
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 3.0,
+                "type": "minecraft:uniform"
+              },
+    		  "conditions": [
+	    	    {
+		    	  "condition": "minecraft:entity_properties",
+			      "predicate": {
+    			    "nbt": "{HandItems:[{},{tag:{String:2}}]}"
+			      },
+				  "entity": "this"
+    			}
+	    	  ]
+			},
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3.0,
+                "max": 5.0,
+                "type": "minecraft:uniform"
+              },
+    		  "conditions": [
+	    	    {
+		    	  "condition": "minecraft:entity_properties",
+			      "predicate": {
+    			    "nbt": "{HandItems:[{},{tag:{String:3}}]}"
+			      },
+				  "entity": "this"
+    			}
+	    	  ]
+			},
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 5.0,
+                "max": 7.0,
+                "type": "minecraft:uniform"
+              },
+    		  "conditions": [
+	    	    {
+		    	  "condition": "minecraft:entity_properties",
+			      "predicate": {
+    			    "nbt": "{HandItems:[{},{tag:{String:4}}]}"
+			      },
+				  "entity": "this"
+    			}
+	    	  ]
+			}
+          ],
+          "name": "minecraft:string"
+        }
+      ]
+    }
+  ]
+}

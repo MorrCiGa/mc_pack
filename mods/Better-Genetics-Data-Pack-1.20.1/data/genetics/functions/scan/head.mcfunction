@@ -1,0 +1,2 @@
+execute store result score temp genetics.var run data get entity @s HandItems[1].tag.Effect 1
+execute unless score temp genetics.var matches 0 as @e[type=#genetics:hostile,distance=..12.5] run function genetics:scan/hostile

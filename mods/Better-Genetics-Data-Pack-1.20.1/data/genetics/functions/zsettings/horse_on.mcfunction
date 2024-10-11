@@ -1,0 +1,3 @@
+execute if score horse genetics.set matches 1 run tellraw @s [{"text":"Better Attribute Genetics is already turned ","color":"yellow"},{"text":"On","color":"dark_green"},{"text":".","color":"yellow"}]
+execute if score horse genetics.set matches 2 run tellraw @s [{"text":"Better Attribute Genetics has been turned ","color":"yellow"},{"text":"On","color":"dark_green"},{"text":".","color":"yellow"}]
+execute if score horse genetics.set matches 2 run scoreboard players set horse genetics.set 1

@@ -1,0 +1,4 @@
+execute store result score temp1 genetics.var run data get entity @s HandItems[1].tag.Attack 1
+scoreboard players operation temp2 genetics.var = temp1 genetics.var
+scoreboard players operation temp1 genetics.var /= 10 genetics.con
+tellraw @p[tag=genetics.caster] ["",{"text":"Attack Damage: ","color":"yellow","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Attack Damage\n","color":"aqua"},{"text":"The amount of damage an axolotl deals\nwhen attacking, measured in half-hearts.","color":"yellow"}]}}},{"score":{"name":"temp1","objective":"genetics.var"},"color":"green","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Attack Damage\n","color":"aqua"},{"text":"Maximum Possible Value: ","color":"yellow"},{"text":"11","color":"green"}]}}}]

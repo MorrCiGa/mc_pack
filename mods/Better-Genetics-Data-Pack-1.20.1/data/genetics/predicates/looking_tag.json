@@ -1,0 +1,19 @@
+{
+  "condition": "minecraft:entity_properties",
+  "entity": "this",
+  "predicate": {
+    "type_specific": {
+      "type": "player",
+      "looking_at": {
+        "type": "#genetics:gen",
+        "distance": {
+          "absolute": {
+            "min": 0.0,
+            "max": 9.5
+          }
+        },
+        "nbt": "{Tags:['genetics.cast']}"
+      }
+    }
+  }
+}

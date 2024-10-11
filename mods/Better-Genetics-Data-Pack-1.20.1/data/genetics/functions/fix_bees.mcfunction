@@ -1,0 +1,1 @@
+execute as @e[type=minecraft:bee,tag=genetics.scanned] run function genetics:scan/fix_bees

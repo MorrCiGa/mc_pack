@@ -1,0 +1,99 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              }
+            },
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 0.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              },
+    		  "conditions": [
+	    	    {
+		    	  "condition": "minecraft:entity_properties",
+			      "predicate": {
+    			    "nbt": "{HandItems:[{},{tag:{Feather:1}}]}"
+			      },
+				  "entity": "this"
+    			}
+	    	  ]
+			},
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1.0,
+                "max": 2.0,
+                "type": "minecraft:uniform"
+              },
+    		  "conditions": [
+	    	    {
+		    	  "condition": "minecraft:entity_properties",
+			      "predicate": {
+    			    "nbt": "{HandItems:[{},{tag:{Feather:2}}]}"
+			      },
+				  "entity": "this"
+    			}
+	    	  ]
+			},
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2.0,
+                "max": 4.0,
+                "type": "minecraft:uniform"
+              },
+    		  "conditions": [
+	    	    {
+		    	  "condition": "minecraft:entity_properties",
+			      "predicate": {
+    			    "nbt": "{HandItems:[{},{tag:{Feather:3}}]}"
+			      },
+				  "entity": "this"
+    			}
+	    	  ]
+			},
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 4.0,
+                "max": 6.0,
+                "type": "minecraft:uniform"
+              },
+    		  "conditions": [
+	    	    {
+		    	  "condition": "minecraft:entity_properties",
+			      "predicate": {
+    			    "nbt": "{HandItems:[{},{tag:{Feather:4}}]}"
+			      },
+				  "entity": "this"
+    			}
+	    	  ]
+			},
+            {
+              "function": "minecraft:looting_enchant",
+              "count": {
+                "min": 0.0,
+                "max": 1.0
+              }
+            }
+          ],
+          "name": "minecraft:feather"
+        }
+      ]
+    }
+  ]
+}

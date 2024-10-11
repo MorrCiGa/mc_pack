@@ -1,0 +1,1 @@
+tellraw @a [{"text":"Better Genetics ","color":"gold"},{"text":"data pack is installed. Use the command ","color":"yellow"},{"text":"/function genetics:settings","color":"green","clickEvent":{"action":"suggest_command","value":"/function genetics:settings"}},{"text":" to open the settings menu.","color":"yellow"}]

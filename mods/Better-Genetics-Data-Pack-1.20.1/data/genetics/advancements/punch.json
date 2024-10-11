@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "breed": {
+            "trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+			    "damage": {
+				    "source_entity": {
+					    "nbt": "{SelectedItem:{id:\"minecraft:carrot_on_a_stick\"}}"
+					}
+				},
+				"entity": {
+				    "type": "#genetics:gen"
+				}
+			}
+        }
+    },
+    "rewards": {
+        "function": "genetics:punch_info"
+    }
+}

@@ -1,0 +1,8 @@
+execute store result score temp1 genetics.var run data get entity @s HandItems[1].tag.Speed 1
+scoreboard players operation temp1 genetics.var *= 5 genetics.con
+scoreboard players add temp1 genetics.var 1
+scoreboard players operation temp1 genetics.var /= 3 genetics.con
+scoreboard players operation temp2 genetics.var = temp1 genetics.var
+scoreboard players operation temp1 genetics.var /= 10 genetics.con
+scoreboard players operation temp2 genetics.var %= 10 genetics.con
+tellraw @p[tag=genetics.caster] ["",{"text":"Movement Speed: ","color":"yellow","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Movement Speed\n","color":"aqua"},{"text":"The riding speed of a camel\nmeasured in blocks travelled per second.","color":"yellow"}]}}},{"score":{"name":"temp1","objective":"genetics.var"},"color":"green","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Movement Speed\n","color":"aqua"},{"text":"Maximum Possible Value: ","color":"yellow"},{"text":"10.0\n","color":"green"},{"text":"Average Value (Median): ","color":"yellow"},{"text":"5.0","color":"green"}]}}},{"text":".","color":"green","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Movement Speed\n","color":"aqua"},{"text":"Maximum Possible Value: ","color":"yellow"},{"text":"10.0\n","color":"green"},{"text":"Average Value (Median): ","color":"yellow"},{"text":"5.0","color":"green"}]}}},{"score":{"name":"temp2","objective":"genetics.var"},"color":"green","hoverEvent":{"action":"show_text","value":{"text":"","extra":[{"text":"Movement Speed\n","color":"aqua"},{"text":"Maximum Possible Value: ","color":"yellow"},{"text":"10.0\n","color":"green"},{"text":"Average Value (Median): ","color":"yellow"},{"text":"5.0","color":"green"}]}}}]

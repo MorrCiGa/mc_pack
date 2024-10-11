@@ -1,0 +1,2 @@
+execute if entity @s[nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick"}},tag=!genetics.nopunch] run function genetics:punch/no
+execute if entity @s[nbt=!{SelectedItem:{id:"minecraft:carrot_on_a_stick"}},tag=genetics.nopunch] run function genetics:punch/yes
